@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<h1>Welcome To LaptopShop</h1>
+<div class="form">
+
+         <form th:action="@{/home}" th:object="${loginForm}" method="post">
+         <p th:if="${invalidCredentials}" class="error">username or password is wrong</p>
+         <label  for="username"> Username: </label>
+         <input type="text" id="username" name="username" autofocus="autofocus"/>
+        </br></br>
+         
+          <label for="password"> Password: </label>
+         <input  type="password" id="password" name="password"/></br></br>
+         <input class="btn" type="submit" value="Log In"/>
+               
+         </form>   
+         
+         
+         
+         </div>
+         
+         
+         
+         </body>
+</html>
